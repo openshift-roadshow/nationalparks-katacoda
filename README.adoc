@@ -1,0 +1,26 @@
+= NationalParks backend application (Python)
+
+This application is a backend that provides geolocation information about
+NationalParks. The information is loaded and cached within the service and
+no backend database is used.
+
+== Installation
+
+Assuming you're using the project <roadshow>:
+
+----
+oc new-project roadshow
+oc create -f ./ose3/application-template.json
+oc new-app nationalparks-katacoda
+----
+
+There's some options that can be parameterized:
+
+* APPLICATION_NAME: Name of the application
+* APPLICATION_HOSTNAME: Hostname/route to access your application
+
+Example:
+
+----
+oc new-app nationalparks-katacoda -p APPLICATION_HOSTNAME=nationalparks-katcoda.127.0.0.1.xip.io
+----
